@@ -22,5 +22,18 @@ namespace RPSTests
             // Assert
             Assert::AreEqual("Player1", result);
         }
+        
+        TEST_METHOD(Player2WinsWithScissorsVsRock)
+        {
+            // Arrange
+            char p1[] = "Scissors";
+            char p2[] = "Rock";
+
+            // Act
+            char* result = rpsResult(p1, p2);
+
+            // Assert
+            Assert::AreEqual("Player2", result);
+        }
     };
 }
