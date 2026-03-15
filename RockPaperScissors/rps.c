@@ -8,5 +8,8 @@ char* rpsResult(char* player1, char* player2)
     if (strcmp(player1, "Scissors") == 0 && strcmp(player2, "Rock") == 0)
         return "Player2";
 
+    if (strcmp(player1, player2) == 0)
+        return "Draw";
+
     return "";
 }

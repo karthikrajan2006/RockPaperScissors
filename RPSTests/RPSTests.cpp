@@ -35,5 +35,18 @@ namespace RPSTests
             // Assert
             Assert::AreEqual("Player2", result);
         }
+
+        TEST_METHOD(DrawWhenBothPlayersChooseSame)
+        {
+            // Arrange
+            char p1[] = "Rock";
+            char p2[] = "Rock";
+
+            // Act
+            char* result = rpsResult(p1, p2);
+
+            // Assert
+            Assert::AreEqual("Draw", result);
+        }
     };
 }
