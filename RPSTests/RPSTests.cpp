@@ -48,5 +48,18 @@ namespace RPSTests
             // Assert
             Assert::AreEqual("Draw", result);
         }
+
+        TEST_METHOD(InvalidWhenPlayerEntersUnknownWord)
+        {
+            // Arrange
+            char p1[] = "banana";
+            char p2[] = "Rock";
+
+            // Act
+            char* result = rpsResult(p1, p2);
+
+            // Assert
+            Assert::AreEqual("Invalid", result);
+        }
     };
 }
